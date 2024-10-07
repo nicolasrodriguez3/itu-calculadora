@@ -1,50 +1,49 @@
-from typing import Generator
+from helpers.console_helpers import request_numbers
 
 
 def main():
     while True:
         option: int = show_menu()
-        
+
         match option:
             case 0:
                 print("Gracias por usar el programa.")
                 break
             case 1:
-                print(add())
+                print("El resultado es: ", add())
             case 2:
-                subtract()
+                print("El resultado es: ", subtract())
             case 3:
-                multiply()
+                print("El resultado es: ", multiply())
             case 4:
-                divide()
+                print("El resultado es: ", divide())
             case _:
                 print("Opcion inválida")
-            
-       
+
+
 def add() -> float:
-    n1 = float(input("Ingrese un número: "))
-    n2 = float(input("Ingrese otro número: "))
-    
+    n1, n2 = request_numbers()
+
     return n1 + n2
-        
-def subtract():
-    n1 = float(input("Ingrese un número: "))
-    n2 = float(input("Ingrese otro número: "))
-    
+
+
+def subtract() -> float:
+    n1, n2 = request_numbers()
+
     return n1 - n2
-        
-def multiply():
-    n1 = float(input("Ingrese un número: "))
-    n2 = float(input("Ingrese otro número: "))
-    
+
+
+def multiply() -> float:
+    n1, n2 = request_numbers()
+
     return n1 * n2
-        
-def divide():
-    n1 = float(input("Ingrese un número: "))
-    n2 = float(input("Ingrese otro número: "))
-    
+
+
+def divide() -> float:
+    n1, n2 = request_numbers()
+
     return n1 / n2
-        
+
 
 def show_menu() -> int:
     while True:
