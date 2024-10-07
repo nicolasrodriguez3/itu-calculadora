@@ -28,13 +28,22 @@ def add() -> float:
     return n1 + n2
         
 def subtract():
-    pass
+    n1 = float(input("Ingrese un número: "))
+    n2 = float(input("Ingrese otro número: "))
+    
+    return n1 - n2
         
 def multiply():
-    pass
+    n1 = float(input("Ingrese un número: "))
+    n2 = float(input("Ingrese otro número: "))
+    
+    return n1 * n2
         
 def divide():
-    pass
+    n1 = float(input("Ingrese un número: "))
+    n2 = float(input("Ingrese otro número: "))
+    
+    return n1 / n2
         
 
 def show_menu() -> int:
